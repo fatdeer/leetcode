@@ -25,4 +25,4 @@ Can you solve it without using extra space?
 
 <div id="similar" class="btn btn-xs btn-warning">Show Similar Problems</div>
 
-<span class="hidebutton">[(M) Linked List Cycle](/problems/linked-list-cycle/) [(H) Find the Duplicate Number](/problems/find-the-duplicate-number/)</span></div>
+<span class="hidebutton">[(E) Linked List Cycle](/problems/linked-list-cycle/) [(H) Find the Duplicate Number](/problems/find-the-duplicate-number/)</span></div>
