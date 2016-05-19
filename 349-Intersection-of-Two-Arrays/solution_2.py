@@ -1,22 +1,25 @@
-func intersection(nums1 []int, nums2 []int) []int {
-    s := []int{}
+class Solution(object):
+    def intersection(self, nums1, nums2):
+        """
+        :type nums1: List[int]
+        :type nums2: List[int]
+        :rtype: List[int]
+        """
+        nums1 = list(set(nums1))
+        nums1.sort()
+        L = len(nums1)
+        res = set()
+        for x in nums2: 
+            l, r = 0, L-1
 
-    if len(nums1) != 0 && len(nums2) != 0 {
-        m := make(map[int]bool)
+            while l <= r:
+                m = (r + l) / 2
+                if x > nums1[m]:
+                    l = m + 1
+                elif x < nums1[m]:
+                    r = m - 1
+                else: 
+                    res.add(x)
+                    break
 
-        for _, v := range nums1 {
-            if _, ok := m[v]; !ok {
-                m[v] = false
-            }
-        }
-
-        for _, v := range nums2 {
-            if b, ok := m[v]; ok && b == false {
-                m[v] = true
-                s = append(s, v)
-            }
-        }
-    }
-    return s
-    
-}
+        return list(res)
