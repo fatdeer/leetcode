@@ -28,6 +28,6 @@ Return:
 
 <div>
 
-<div id="tags" class="btn btn-xs btn-warning">Show Tags</div>
+<div id="tags" class="btn btn-xs btn-warning">Hide Tags</div>
 
-<span class="hidebutton">[Hash Table](/tag/hash-table/) [Bit Manipulation](/tag/bit-manipulation/)</span></div>
+<span class="hidebutton" style="display: inline;">[Hash Table](/tag/hash-table/) [Bit Manipulation](/tag/bit-manipulation/)</span></div>
