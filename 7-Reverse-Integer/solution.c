@@ -6,8 +6,6 @@ int reverse(int x) {
         if (temp > 2147483647 || temp < -2147483648)
             return 0;
         temp += x % 10;
-        if (temp > 2147483647 || temp < -2147483648)
-            return 0;
         x /= 10;
     }
     
