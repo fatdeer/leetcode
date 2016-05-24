@@ -26,6 +26,6 @@ Given _nums1_ = `[1, 2, 2, 1]`, _nums2_ = `[2, 2]`, return `[2]`.
 
 <div>
 
-<div id="similar" class="btn btn-xs btn-warning">Hide Similar Problems</div>
+<div id="similar" class="btn btn-xs btn-warning">Show Similar Problems</div>
 
-<span class="hidebutton" style="display: inline; opacity: 0.81669;">[(E) Intersection of Two Arrays II](/problems/intersection-of-two-arrays-ii/)</span></div>
+<span class="hidebutton">[(E) Intersection of Two Arrays II](/problems/intersection-of-two-arrays-ii/)</span></div>
