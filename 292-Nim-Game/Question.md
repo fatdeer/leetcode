@@ -25,6 +25,18 @@ Special thanks to [@jianchao.li.fighter](https://leetcode.com/discuss/user/jianc
 
 <div>
 
+<div id="company_tags" class="btn btn-xs btn-warning">Show Company Tags</div>
+
+<span class="hidebutton">[Adobe](/company/adobe/)</span></div>
+
+<div>
+
+<div id="tags" class="btn btn-xs btn-warning">Show Tags</div>
+
+<span class="hidebutton">[Brainteaser](/tag/brainteaser/)</span></div>
+
+<div>
+
 <div id="similar" class="btn btn-xs btn-warning">Show Similar Problems</div>
 
 <span class="hidebutton">[(M) Flip Game II](/problems/flip-game-ii/)</span></div>
