@@ -1,6 +1,6 @@
 # 116. Populating Next Right Pointers in Each Node
 
-[Original Page](https://leetcode.com/problems/populating-next-right-pointers-in-each-node/)
+[Original Page](https://leetcode.com/problems/populating-next-right-pointers-in-each-node/?sort=votes)
 
 Given a binary tree
 
