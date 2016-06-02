@@ -1,6 +1,6 @@
 # 147. Insertion Sort List
 
-[Original Page](https://leetcode.com/problems/insertion-sort-list/)
+[Original Page](https://leetcode.com/problems/insertion-sort-list/?sort=votes)
 
 Sort a linked list using insertion sort.
 
