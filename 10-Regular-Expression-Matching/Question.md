@@ -30,6 +30,12 @@ isMatch("aab", "c*a*b") → true
 
 <div>
 
+<div id="company_tags" class="btn btn-xs btn-warning">Show Company Tags</div>
+
+<span class="hidebutton">[Airbnb](/company/airbnb/) [Facebook](/company/facebook/) [Google](/company/google/) [Twitter](/company/twitter/) [Uber](/company/uber/)</span></div>
+
+<div>
+
 <div id="tags" class="btn btn-xs btn-warning">Show Tags</div>
 
 <span class="hidebutton">[Dynamic Programming](/tag/dynamic-programming/) [Backtracking](/tag/backtracking/) [String](/tag/string/)</span></div>
