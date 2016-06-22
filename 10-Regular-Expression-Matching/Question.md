@@ -1,6 +1,6 @@
 # 10. Regular Expression Matching
 
-[Original Page](https://leetcode.com/problems/regular-expression-matching/)
+[Original Page](https://leetcode.com/problems/regular-expression-matching/?sort=votes)
 
 Implement regular expression matching with support for `'.'` and `'*'`.
 
@@ -27,12 +27,6 @@ isMatch("aab", "c*a*b") → true
 [Subscribe](/subscribe/) to see which companies asked this question
 
 </div>
-
-<div>
-
-<div id="company_tags" class="btn btn-xs btn-warning">Show Company Tags</div>
-
-<span class="hidebutton">[Airbnb](/company/airbnb/) [Facebook](/company/facebook/) [Google](/company/google/) [Twitter](/company/twitter/) [Uber](/company/uber/)</span></div>
 
 <div>
 
