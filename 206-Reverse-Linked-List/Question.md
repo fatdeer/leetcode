@@ -20,6 +20,12 @@ A linked list can be reversed either iteratively or recursively. Could you imple
 
 <div>
 
+<div id="company_tags" class="btn btn-xs btn-warning">Show Company Tags</div>
+
+<span class="hidebutton">[Adobe](/company/adobe/) [Amazon](/company/amazon/) [Apple](/company/apple/) [Bloomberg](/company/bloomberg/) [Facebook](/company/facebook/) [Microsoft](/company/microsoft/) [Snapchat](/company/snapchat/) [Twitter](/company/twitter/) [Uber](/company/uber/) [Yahoo](/company/yahoo/) [Yelp](/company/yelp/) [Zenefits](/company/zenefits/)</span></div>
+
+<div>
+
 <div id="tags" class="btn btn-xs btn-warning">Show Tags</div>
 
 <span class="hidebutton">[Linked List](/tag/linked-list/)</span></div>
