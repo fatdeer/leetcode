@@ -1,30 +1,35 @@
 /**
  * Definition for singly-linked list.
- * struct ListNode {
- *     int val;
- *     ListNode *next;
- *     ListNode(int x) : val(x), next(NULL) {}
- * };
+ * type ListNode struct {
+ *     Val int
+ *     Next *ListNode
+ * }
  */
-class Solution {
-public:
-    ListNode* mergeTwoLists(ListNode* l1, ListNode* l2) {
-        ListNode head(-1);
-        for (ListNode *p = &head; l1 != nullptr || l2 != nullptr; p = p->next)
-        {
-            int val1 = l1 == nullptr ? INT_MAX : l1->val;
-            int val2 = l2 == nullptr ? INT_MAX : l2->val;
-            if (val1 <= val2)
-            {
-                p->next = l1;
-                l1 = l1->next;
-            }
-            else
-            {
-                p->next = l2;
-                l2 = l2->next;
-            }
-        }
-        return head.next;
-    }
-};
+func mergeTwoLists(l1 *ListNode, l2 *ListNode) *ListNode {
+	if l1 == nil {
+		return l2
+	}
+	if l2 == nil {
+		return l1
+	}
+	var dummy = &ListNode{0, nil}
+	var current *ListNode
+	current = dummy
+	for l1 != nil && l2 != nil {
+		if l1.Val < l2.Val {
+			current.Next = l1
+			l1 = l1.Next
+		} else {
+			current.Next = l2
+			l2 = l2.Next
+		}
+		current = current.Next
+	}
+
+	if l1 != nil {
+		current.Next = l1
+	} else {
+		current.Next = l2
+	}
+	return dummy.Next
+}
