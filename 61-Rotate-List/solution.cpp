@@ -9,37 +9,25 @@
 class Solution {
 public:
     ListNode* rotateRight(ListNode* head, int k) {
-        int len = 1;
-        ListNode *cur = head;
-        
-        if (head == NULL) {
+        if (head == nullptr || head->next == nullptr) {
             return head;
         }
-        
-        while (cur->next) {
-            len++;
-            cur = cur->next;
+
+        int n = 1;
+        auto curr = head;
+        for (; curr->next; curr = curr->next) {
+            ++n;
         }
-        
-        k = k % len;
-        
-        if (k == 0) {
-            return head;
+        curr->next = head;
+
+        auto tail = curr;
+        k = n - k % n;
+        curr = head;
+        for (int i = 0; i < k; curr = curr->next, ++i) {
+            tail = curr;
         }
-        
-        cur->next = head;  // loop
-        
-        cur = head;
-        
-        for (int i = 0; i < len - k - 1; i++) {
-            cur = cur->next;
-        }
-        
-        ListNode *const newTail = cur;
-        ListNode *const newHead = cur->next;
-        
-        newTail->next = NULL;
-        
-        return newHead;
+
+        tail->next = nullptr;
+        return curr;
     }
 };
