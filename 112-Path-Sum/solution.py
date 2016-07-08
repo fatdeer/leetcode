@@ -1,30 +1,22 @@
-/**
- * Definition for a binary tree node.
- * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
- * };
- */
-class Solution {
-public:
-    bool hasPathSum(TreeNode* root, int sum) {
-        if (root == nullptr)
-            return false;
-        if (root->left == nullptr && root->right == nullptr)
-        {
-            if (root->val == sum)
-                return true;
-            else 
-                return false;
-        }
+# Definition for a binary tree node.
+# class TreeNode(object):
+#     def __init__(self, x):
+#         self.val = x
+#         self.left = None
+#         self.right = None
+
+class Solution(object):
+    def hasPathSum(self, root, sum):
+        """
+        :type root: TreeNode
+        :type sum: int
+        :rtype: bool
+        """
+        if root is None:
+            return False
         
-        if (hasPathSum(root->left, sum - root->val))
-            return true;
-        if (hasPathSum(root->right, sum - root->val))
-            return true;
-            
-        return false;
-    }
-};
+        if root.left is None and root.right is None and root.val == sum:
+            return True
+        
+        return self.hasPathSum(root.left, sum - root.val) or self.hasPathSum(root.right, sum - root.val)
+        
