@@ -11,7 +11,7 @@ public:
 };
 
 void MinStack::push(int x) {
-    if (minStack.empty() || minStack.top() > x) {
+    if (minStack.empty() || minStack.top() >= x) {
         minStack.push(x);
     }
     
