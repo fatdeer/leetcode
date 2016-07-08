@@ -12,6 +12,12 @@ Given a singly linked list where elements are sorted in ascending order, convert
 
 <div>
 
+<div id="company_tags" class="btn btn-xs btn-warning">Show Company Tags</div>
+
+<span class="hidebutton">[Zenefits](/company/zenefits/)</span></div>
+
+<div>
+
 <div id="tags" class="btn btn-xs btn-warning">Show Tags</div>
 
 <span class="hidebutton">[Depth-first Search](/tag/depth-first-search/) [Linked List](/tag/linked-list/)</span></div>
