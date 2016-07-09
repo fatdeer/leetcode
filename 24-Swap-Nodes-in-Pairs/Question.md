@@ -17,6 +17,12 @@ Your algorithm should use only constant space. You may **not** modify the values
 
 <div>
 
+<div id="company_tags" class="btn btn-xs btn-warning">Show Company Tags</div>
+
+<span class="hidebutton">[Bloomberg](/company/bloomberg/) [Microsoft](/company/microsoft/) [Uber](/company/uber/)</span></div>
+
+<div>
+
 <div id="tags" class="btn btn-xs btn-warning">Show Tags</div>
 
 <span class="hidebutton">[Linked List](/tag/linked-list/)</span></div>
