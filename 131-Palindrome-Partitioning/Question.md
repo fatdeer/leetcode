@@ -9,10 +9,10 @@ Return all possible palindrome partitioning of _s_.
 For example, given _s_ = `"aab"`,  
 Return
 
-<pre>  [
-    ["aa","b"],
-    ["a","a","b"]
-  ]
+<pre>[
+  ["aa","b"],
+  ["a","a","b"]
+]
 </pre>
 
 <div>
