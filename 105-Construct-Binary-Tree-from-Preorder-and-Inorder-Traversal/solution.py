@@ -12,14 +12,14 @@ class Solution(object):
         :type inorder: List[int]
         :rtype: TreeNode
         """
-        def buildTreeHelper(preorder, pstart, inorder, istart, iend, indexDict):
-            if istart > iend:
+        def buildTreeHelper(indexDict, preorder, inorder, pstart, istart, iend):
+            if istart == iend:
                 return None
             root = TreeNode(preorder[pstart])
             rindex = indexDict.get(preorder[pstart])
             
-            left = buildTreeHelper(preorder, pstart + 1, inorder, istart, rindex - 1, indexDict)
-            right = buildTreeHelper(preorder, pstart + rindex - istart + 1, inorder, rindex + 1, iend, indexDict)
+            left = buildTreeHelper(indexDict, preorder, inorder, pstart + 1, istart, rindex)
+            right = buildTreeHelper(indexDict, preorder, inorder, pstart + rindex - istart + 1, rindex + 1, iend)
             root.left = left
             root.right = right
             return root
@@ -36,5 +36,5 @@ class Solution(object):
         for i, num in enumerate(inorder):
             indexDict[num] = i
         
-        return buildTreeHelper(preorder, 0, inorder, 0, len(inorder) - 1, indexDict)
+        return buildTreeHelper(indexDict, preorder, inorder, 0, 0, len(inorder))
         
