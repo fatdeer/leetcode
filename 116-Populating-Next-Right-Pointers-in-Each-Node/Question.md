@@ -1,6 +1,6 @@
 # 116. Populating Next Right Pointers in Each Node
 
-[Original Page](https://leetcode.com/problems/populating-next-right-pointers-in-each-node/?sort=votes)
+[Original Page](https://leetcode.com/problems/populating-next-right-pointers-in-each-node/)
 
 Given a binary tree
 
@@ -44,12 +44,6 @@ After calling your function, the tree should look like:
 [Subscribe](/subscribe/) to see which companies asked this question
 
 </div>
-
-<div>
-
-<div id="company_tags" class="btn btn-xs btn-warning">Show Company Tags</div>
-
-<span class="hidebutton">[Microsoft](/company/microsoft/)</span></div>
 
 <div>
 
