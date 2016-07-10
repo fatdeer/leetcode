@@ -4,17 +4,11 @@ class Solution(object):
         :type nums: List[int]
         :rtype: int
         """
-        tails = [0] * len(nums)
-        size = 0
-        for x in nums:
-            i, j = 0, size
-            while i != j:
-                m = (i + j) / 2
-                if tails[m] < x:
-                    i = m + 1
-                else:
-                    j = m
-            tails[i] = x
-            size = max(i + 1, size)
-        return size
+        dp = []
+        for i in xrange(len(nums)):
+            dp.append(1)
+            for j in xrange(i):
+                if nums[j] < nums[i]:
+                    dp[i] = max(dp[i], dp[j] + 1)
+        return max(dp) if dp else 0
         
