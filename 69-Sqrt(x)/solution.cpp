@@ -1,17 +1,20 @@
-class Solution {
-public:
-    int mySqrt(int x) {
-        uint64_t i;
-        double x2, y;
-        x2 = x * 0.5;
-        y = x;
-        i = *(uint64_t *) &y;
-        i = 0x5fe6eb50c7b537a9 - (i >> 1); // This magic number is taken from wikipedia.
-        y = *(double *) &i;                // initial guess of the inverse square root
-        y = y * (1.5 - (x2 * y * y));      // Newton for inverse square root.
-        y = y * (1.5 - (x2 * y * y));
-        y = y * (1.5 - (x2 * y * y));
-        y = y * (1.5 - (x2 * y * y));      // repeate 4 times to get enough precision.
-        return x * y;
-    }
-};
+class Solution(object):
+    def mySqrt(self, x):
+        """
+        :type x: int
+        :rtype: int
+        """
+        if x < 2:
+            return x
+
+        start, end = 1, x / 2
+
+        while start <= end:
+            mid = start + (end - start) / 2
+            if x / mid < mid:
+                end = mid - 1
+            else:
+                start = mid + 1
+
+        return end
+        
