@@ -16,10 +16,10 @@ Compute and return the square root of _x_.
 
 <div id="tags" class="btn btn-xs btn-warning">Show Tags</div>
 
-<span class="hidebutton">[Math](/tag/math/) [Binary Search](/tag/binary-search/)</span></div>
+<span class="hidebutton">[Binary Search](/tag/binary-search/) [Math](/tag/math/)</span></div>
 
 <div>
 
 <div id="similar" class="btn btn-xs btn-warning">Show Similar Problems</div>
 
-<span class="hidebutton">[(M) Pow(x, n)](/problems/powx-n/)</span></div>
+<span class="hidebutton">[(M) Pow(x, n)](/problems/powx-n/) [(M) Valid Perfect Square](/problems/valid-perfect-square/)</span></div>
