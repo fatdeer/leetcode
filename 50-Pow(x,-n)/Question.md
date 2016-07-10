@@ -26,4 +26,4 @@ Implement pow(_x_, _n_).
 
 <div id="similar" class="btn btn-xs btn-warning">Show Similar Problems</div>
 
-<span class="hidebutton">[(M) Sqrt(x)](/problems/sqrtx/)</span></div>
+<span class="hidebutton">[(M) Sqrt(x)](/problems/sqrtx/) [(M) Super Pow](/problems/super-pow/)</span></div>
