@@ -3,6 +3,9 @@ public:
     int findKthLargest(vector<int>& nums, int k) {
         int size = nums.size();
         int left = 0, right = size - 1;
+        srand((unsigned)time(0));
+        for(int i = 0; i < size; ++i)
+            swap(nums[i], nums[rand()%size]);
         while (true) {
             int pos = partition(nums, left, right);
             if (pos == k - 1)
