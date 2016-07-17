@@ -1,28 +1,41 @@
-class Solution(object):
-    def threeSum(self, nums):
-        """
-        :type nums: List[int]
-        :rtype: List[List[int]]
-        """
-        nums.sort()
-        i, N, result = 0, len(nums), []
-        while i < N - 2:
-            j, k = i + 1, N - 1
-            while j < k:
-                Sum = nums[i] + nums[j] + nums[k]
-                if not Sum:
-                    result.append([nums[i], nums[j], nums[k]])
-                    while j < k and nums[j] == nums[j + 1]: j += 1
-                    j += 1
-                    while j < k and nums[k] == nums[k - 1]: k -= 1
-                    k -= 1
-                elif Sum < 0:
-                    while j < k and nums[j] == nums[j + 1]: j += 1
-                    j += 1
-                else:
-                    while j < k and nums[k] == nums[k - 1]: k -= 1
-                    k -= 1
-            while i < N - 2 and nums[i] == nums[i + 1]: i += 1
-            i += 1
-        return result
-        
+class Solution {
+    public: vector < vector < int >> threeSum(vector < int > &nums) {
+        vector < vector < int >> ret;
+
+        if (nums.size() <= 2) {
+            return ret;
+        }
+
+        sort(nums.begin(), nums.end());
+        for (int i = 0; i < nums.size() - 2; ++i) {
+            int j = i + 1;
+            int k = nums.size() - 1;
+            while (j < k) {
+                vector < int > curr;
+                if (nums[i] + nums[j] + nums[k] == 0) {
+                    curr.push_back(nums[i]);
+                    curr.push_back(nums[j]);
+                    curr.push_back(nums[k]);
+                    ret.push_back(curr); ++j; --k;
+
+                    while (j < k && nums[j - 1] == nums[j]) {
+                        ++j;
+                    }
+
+                    while (j < k && nums[k] == nums[k + 1]) {
+                        --k;
+                    }
+                } else if (nums[i] + nums[j] + nums[k] < 0) {
+                    ++j;
+                } else {
+                    --k;
+                }
+            }
+
+            while (i < nums.size() - 1 && nums[i] == nums[i + 1]) {
+                ++i;
+            }
+        }
+        return ret;
+    }
+};
