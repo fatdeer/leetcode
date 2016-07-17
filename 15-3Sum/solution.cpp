@@ -1,6 +1,6 @@
 class Solution {
-    public: vector < vector < int >> threeSum(vector < int > &nums) {
-        vector < vector < int >> ret;
+    public: vector<vector<int>> threeSum(vector<int> &nums) {
+        vector<vector<int>> ret;
 
         if (nums.size() <= 2) {
             return ret;
@@ -11,7 +11,7 @@ class Solution {
             int j = i + 1;
             int k = nums.size() - 1;
             while (j < k) {
-                vector < int > curr;
+                vector<int> curr;
                 if (nums[i] + nums[j] + nums[k] == 0) {
                     curr.push_back(nums[i]);
                     curr.push_back(nums[j]);
