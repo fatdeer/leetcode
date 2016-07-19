@@ -4,6 +4,10 @@ public:
         if (matrix.empty()) {
             return false;
         }
+        
+        if (matrix[0].empty()) {
+            return false;
+        }
 
         const int m = matrix.size();
         const int n = matrix[0].size();
