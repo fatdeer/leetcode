@@ -1,24 +1,29 @@
-int search(int* nums, int numsSize, int target) {
-    int left = 0, right = numsSize;
-    while (left < right)
-    {
-        const int mid = (left + right) / 2;
-        if (nums[mid] == target)
-            return mid;
-        if (nums[left] < nums[mid])
-        {
-            if (nums[left] <= target && target < nums[mid])
-                right = mid;
-            else
-                left = mid + 1;
-        }
-        else
-        {
-            if (nums[mid] < target && target <= nums[right - 1])
-                left = mid + 1;
-            else
-                right = mid;
-        }
-    }
-    return -1;
-}
+class Solution(object):
+    def search(self, nums, target):
+        """
+        :type nums: List[int]
+        :type target: int
+        :rtype: int
+        """
+        if not nums:
+            return -1
+
+        low, high = 0, len(nums)
+
+        while low < high:
+            mid = low + (high - low) / 2
+            if target == nums[mid]:
+                return mid
+
+            if nums[low] < nums[mid]:
+                if nums[low] <= target < nums[mid]:
+                    high = mid
+                else:
+                    low = mid + 1
+            else:
+                if nums[mid] < target <= nums[high - 1]:
+                    low = mid + 1
+                else:
+                    high = mid
+        
+        return -1
