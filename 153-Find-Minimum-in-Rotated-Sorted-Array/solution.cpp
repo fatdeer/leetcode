@@ -3,11 +3,11 @@ public:
     int findMin(vector<int>& nums) {
         int left = 0, right = nums.size();
         
-        if (size == 0) {
+        if (right == 0) {
             return 0;
-        } else if (size == 0) {
+        } else if (right == 0) {
             return nums[0];
-        } else if (size == 2) {
+        } else if (right == 2) {
             return min(nums[0], nums[1]);
         }
         
