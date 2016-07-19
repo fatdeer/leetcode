@@ -1,29 +1,30 @@
-class Solution(object):
-    def search(self, nums, target):
-        """
-        :type nums: List[int]
-        :type target: int
-        :rtype: int
-        """
-        if not nums:
-            return -1
+class Solution {
+public:
+    int search(vector<int>& nums, int target) {
+        int left = 0;
+        int right = nums.size() - 1;
 
-        low, high = 0, len(nums)
+        while (left <= right) {
+            int mid = left + (right - left) / 2;
+            if (nums[mid] == target) {
+                return mid;
+            }
+            else if (nums[left] <= nums[mid]) {
+                if (nums[left] <= target && target < nums[mid]) {
+                    right = mid - 1;
+                } else {
+                    left = mid + 1;
+                }
+            } else {
+                if (nums[mid] < target && target <= nums[right]) {
+                    left = mid + 1;
+                } else {
+                    right = mid - 1;
+                }
+            }
+        }
 
-        while low < high:
-            mid = low + (high - low) / 2
-            if target == nums[mid]:
-                return mid
-
-            if nums[low] < nums[mid]:
-                if nums[low] <= target < nums[mid]:
-                    high = mid
-                else:
-                    low = mid + 1
-            else:
-                if nums[mid] < target <= nums[high - 1]:
-                    low = mid + 1
-                else:
-                    high = mid
+        return -1;
         
-        return -1
+    }
+};
