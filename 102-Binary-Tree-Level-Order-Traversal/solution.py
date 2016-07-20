@@ -11,16 +11,20 @@ class Solution(object):
         :type root: TreeNode
         :rtype: List[List[int]]
         """
-        if not root:
+        if root is None:
             return []
-        ans, currLevel, nextLevel = [], [root], []
-        while currLevel:
-            ans.append(list(x.val for x in currLevel))
-            for node in currLevel:
+
+        result, current = [], [root]
+        while current:
+            next_level, vals = [], []
+            for node in current:
+                vals.append(node.val)
                 if node.left:
-                    nextLevel.append(node.left)
+                    next_level.append(node.left)
                 if node.right:
-                    nextLevel.append(node.right)
-            currLevel, nextLevel = nextLevel, []
-        return ans
+                    next_level.append(node.right)
+            current = next_level
+            result.append(vals)
+
+        return result
         
