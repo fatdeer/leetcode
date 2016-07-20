@@ -10,46 +10,35 @@
 class Solution {
 public:
     vector<vector<int>> levelOrderBottom(TreeNode* root) {
+        int depth = getHeight(root);
+        vector<vector<int>> ret(depth);
+        
+        if (depth == 0) {
+            return ret;
+        }
+        
+        getSolution(ret, root, depth - 1);
+        return ret;
+    }
+    
+    void getSolution(vector<vector<int>>& ret, TreeNode* root, int level) {
         if (root == NULL) {
-            vector<vector<int> > v(0, vector<int> (0, 0));
-            return v;
+            return;
         }
-
-        vector<vector<int> > v;
-        queue<TreeNode*> q;
-        q.push(root);
-        q.push(NULL);
-
-        while (!q.empty()) {
-            vector<int > a;
-            {
-                while (q.front() != NULL) {
-                    root = q.front();
-                    a.push_back(q.front()->val);
-                    q.pop();
-
-                    if (root->left) {
-                        q.push(root->left);
-                    }
-
-                    if (root->right) {
-                        q.push(root->right);
-                    }
-                }
-
-                q.pop();
-                v.push_back(a);
-                a.clear();
-
-                if (q.empty()) {
-                    break;
-                }
-
-                q.push(NULL);
-            }
+        
+        ret[level].push_back(root->val);
+        getSolution(ret, root->left, level - 1);
+        getSolution(ret, root->right, level - 1);
+    }
+    
+    int getHeight(TreeNode* root) {
+        if (root == NULL) {
+            return 0;
         }
-
-        reverse(v.begin(), v.end());
-        return v;
+        
+        int left = getHeight(root->left);
+        int right = getHeight(root->right);
+        int height = ((left > right) ? left : right) + 1;
+        return height;
     }
 };
