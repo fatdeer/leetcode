@@ -1,13 +1,15 @@
-class Solution(object):
-    def uniquePaths(self, m, n):
-        """
-        :type m: int
-        :type n: int
-        :rtype: int
-        """
-        dp = [1] * n
-        for i in xrange(1, m):
-            for j in xrange(1, n):
-                dp[j] += dp[j-1]
-        return dp[-1]
+class Solution {
+public:
+    int uniquePaths(int m, int n) {
+        int ways[n] = {0};
+        ways[n - 1] = 1;
         
+        for (int i = m - 1; i >= 0; --i) {
+            for (int j = n - 2; j >= 0; --j) {
+                ways[j] += ways[j + 1];
+            }
+        }
+        
+        return ways[0];
+    }
+};
