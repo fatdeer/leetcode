@@ -10,9 +10,8 @@
 class Solution {
 public:
     vector<TreeNode*> generateTrees(int n) {
-        if (n == 0) {
-            return NULL;
-        }
+        if (n < 1)
+            return vector<TreeNode*> (0);
         return generate(1, n);
     }
     
