@@ -1,11 +1,12 @@
-class Solution(object):
-    def maxSubArray(self, nums):
-        """
-        :type nums: List[int]
-        :rtype: int
-        """
-        global_max, local_max = float("-inf"), float("-inf")
-        for x in nums:
-            local_max = max(0, local_max + x)
-            global_max = max(global_max, local_max)
-        return global_max
+class Solution {
+public:
+    int maxSubArray(vector<int>& nums) {
+        int res = INT_MIN, f = 0;
+        for (int i = 0; i < nums.size(); i++)
+        {
+            f = max(f + nums[i], nums[i]);
+            res = max(res, f);
+        }
+        return res;
+    }
+};
