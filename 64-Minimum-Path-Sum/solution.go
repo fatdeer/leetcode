@@ -1,17 +1,22 @@
-class Solution(object):
-    def minPathSum(self, grid):
-        """
-        :type grid: List[List[int]]
-        :rtype: int
-        """
-        sum = list(grid[0])
-        for j in xrange(1, len(grid[0])):
-            sum[j] = sum[j - 1] + grid[0][j]
+func min(x, y int) int {
+	if x < y {
+		return x
+	}
+	return y
+}
 
-        for i in xrange(1, len(grid)):
-            sum[0] += grid[i][0]
-            for j in xrange(1, len(grid[0])):
-                sum[j] = min(sum[j - 1], sum[j]) + grid[i][j]
+func minPathSum(grid [][]int) int {
+    m, n := len(grid), len(grid[0])
+	sum := grid[0]
+	for i := 1; i < n; i++ {
+		sum[i] = sum[i-1] + grid[0][i]
+	}
 
-        return sum[-1]
-        
+	for i := 1; i < m; i++ {
+		sum[0] += grid[i][0]
+		for j := 1; j < n; j++ {
+			sum[j] = min(sum[j-1], sum[j]) + grid[i][j]
+		}
+	}
+	return sum[n-1]
+}
