@@ -1,17 +1,22 @@
-class Solution(object):
-    def minPathSum(self, grid):
-        """
-        :type grid: List[List[int]]
-        :rtype: int
-        """
-        sum = list(grid[0])
-        for j in xrange(1, len(grid[0])):
-            sum[j] = sum[j - 1] + grid[0][j]
-
-        for i in xrange(1, len(grid)):
-            sum[0] += grid[i][0]
-            for j in xrange(1, len(grid[0])):
-                sum[j] = min(sum[j - 1], sum[j]) + grid[i][j]
-
-        return sum[-1]
+class Solution {
+public:
+    int minPathSum(vector<vector<int>>& grid) {
+        int m = grid.size();
+        int n = grid[0].size();
         
+        vector<int> cur(m, grid[0][0]);
+        
+        for (int i = 1; i < m; i++) {
+            cur[i] = cur[i - 1] + grid[i][0]; 
+        }
+        
+        for (int j = 1; j < n; j++) {
+            cur[0] += grid[0][j]; 
+            for (int i = 1; i < m; i++) {
+                cur[i] = min(cur[i - 1], cur[i]) + grid[i][j];
+            }
+        }
+        
+        return cur[m - 1];
+    }
+};
