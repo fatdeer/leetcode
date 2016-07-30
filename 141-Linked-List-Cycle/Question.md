@@ -15,6 +15,12 @@ Can you solve it without using extra space?
 
 <div>
 
+<div id="company_tags" class="btn btn-xs btn-warning">Show Company Tags</div>
+
+<span class="hidebutton">[Amazon](/company/amazon/) [Bloomberg](/company/bloomberg/) [Microsoft](/company/microsoft/) [Yahoo](/company/yahoo/)</span></div>
+
+<div>
+
 <div id="tags" class="btn btn-xs btn-warning">Show Tags</div>
 
 <span class="hidebutton">[Linked List](/tag/linked-list/) [Two Pointers](/tag/two-pointers/)</span></div>
