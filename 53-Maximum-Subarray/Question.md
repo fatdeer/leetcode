@@ -4,8 +4,8 @@
 
 Find the contiguous subarray within an array (containing at least one number) which has the largest sum.
 
-For example, given the array `[−2,1,−3,4,−1,2,1,−5,4]`,  
-the contiguous subarray `[4,−1,2,1]` has the largest sum = `6`.
+For example, given the array `[-2,1,-3,4,-1,2,1,-5,4]`,  
+the contiguous subarray `[4,-1,2,1]` has the largest sum = `6`.
 
 [click to show more practice.](#)
 
@@ -20,12 +20,6 @@ If you have figured out the O(_n_) solution, try coding another solution using t
 [Subscribe](/subscribe/) to see which companies asked this question
 
 </div>
-
-<div>
-
-<div id="company_tags" class="btn btn-xs btn-warning">Show Company Tags</div>
-
-<span class="hidebutton">[Bloomberg](/company/bloomberg/) [LinkedIn](/company/linkedin/) [Microsoft](/company/microsoft/)</span></div>
 
 <div>
 
